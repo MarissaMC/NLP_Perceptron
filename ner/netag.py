@@ -217,6 +217,7 @@ for sen in sys.stdin:
         sys.stdout.write('/')
         sys.stdout.write(tagger[i])
         sys.stdout.write(' ')
+        sys.stdout.flush()
         if i==len(words)-2:
            sys.stdout.write('\n')
 
