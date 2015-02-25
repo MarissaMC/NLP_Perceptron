@@ -84,43 +84,43 @@ After 5 iteration of Averaged Perceptron, I got the following information:
 
 LOC
 
-Precision: 0.6052871467639015
+Precision: 0.4360671
 
-Recall: 0.6747967479674797
+Recall: 0.2683168
 
-F-score: 0.6381547333012973
+F-score: 0.3322169
 
 PER
 
-Precision: 0.4516276937184778
+Precision: 0.3854738
 
-Recall: 0.8060556464811784
+Recall: 0.2843246
 
-F-score: 0.578900969732589
+F-score: 0.3272617
 
 MISC
 
-Precision: 0.6507352941176471
+Precision: 0.4315402
 
-Recall: 0.39775280898876403
+Recall: 0.0766312
 
-F-score: 0.4937238493723849
+F-score: 0.1301509
 
 ORG
 
-Precision: 0.7228831350594822
+Precision: 0.5324229
 
-Recall: 0.6076470588235294
+Recall: 0.2188597
 
-F-score: 0.6602748481943113
+F-score: 0.3102053
 
 O
 
-Precision: 0.9771206327133669
+Precision: 0.9771206
 
-Recall: 0.9915115971426052
+Recall: 0.9915116
 
-F-score: 0.9842635149923398
+F-score: 0.9842635
 
 The overall F-score: 0.93
 
@@ -134,43 +134,43 @@ For NER dataset, the performance metrics are as below:
 
 LOC
 
-Precision: 0.668769716088328
+Precision: 0.4818018
 
-Recall: 0.6463414634146342
+Recall: 0.2570022
 
-F-score: 0.6573643410852713
+F-score: 0.3352016
 
 ORG
 
-Precision: 0.7221022318214543
+Precision: 0.5318478
 
-Recall: 0.59
+Recall: 0.212504
 
-F-score: 0.6494011006798316
+F-score: 0.303673
 
 PER
 
-Precision: 0.9280575539568345
+Precision: 0.7921168
 
-Recall: 0.31669394435351883
+Recall: 0.1117093
 
-F-score: 0.4722391702257474
+F-score: 0.1958049
 
 MISC
 
-Precision: 0.7844311377245509
+Precision: 0.5202017
 
-Recall: 0.2943820224719101
+Recall: 0.0567158
 
-F-score: 0.4281045751633986
+F-score: 0.1022803
 
 O
 
-Precision: 0.9751077070368598
+Precision: 0.9751077
 
-Recall: 0.8533159890642914
+Recall: 0.8533160
 
-F-score: 0.9101555610427176
+F-score: 0.9101556
 
 The overall F-score: 0.832
 
