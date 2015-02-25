@@ -73,11 +73,14 @@ WORD/POSTAG/NERTAG WORD/POSTAG/NERTAG ...
 
 Part IV
 -----------------
+###Source of information
+Piazza discussion, TA office hour
 
 ### Accuracy of my part-of-speech tagger
 After 5 iteration of Averaged Perceptron, my POS tagger accuracy is 93.9%
 
 ### Precision, recall and F-score for each named entity types and the overall F-score
+After 5 iteration of Averaged Perceptron, I got the following information:
 
 B-LOC
 
