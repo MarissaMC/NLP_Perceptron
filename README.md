@@ -141,3 +141,84 @@ F-score: 0.9842635149923398
 The overall F-score: 0.93
 
 ### Use my Naive Bayes classifier instead of my perceptron classifier
+
+Use the Naive Bayes I wrote in HW1 as classifier:
+
+For POS dataset, my POS tagger accuracy is 94.2%
+
+For NER dataset, the performance metrics are as below:
+
+I-LOC
+
+Precision: 0.7204301075268817
+
+Recall: 0.39762611275964393
+
+F-score: 0.5124282982791587
+
+B-LOC
+
+Precision: 0.668769716088328
+
+Recall: 0.6463414634146342
+
+F-score: 0.6573643410852713
+
+I-PER
+
+Precision: 0.8535211267605634
+
+Recall: 0.35273573923166474
+
+F-score: 0.49917627677100496
+
+B-ORG
+
+Precision: 0.7221022318214543
+
+Recall: 0.59
+
+F-score: 0.6494011006798316
+
+I-MISC
+
+Precision: 0.6631578947368421
+
+Recall: 0.1926605504587156
+
+F-score: 0.2985781990521327
+
+B-PER
+
+Precision: 0.9280575539568345
+
+Recall: 0.31669394435351883
+
+F-score: 0.4722391702257474
+
+B-MISC
+
+Precision: 0.7844311377245509
+
+Recall: 0.2943820224719101
+
+F-score: 0.4281045751633986
+
+O
+
+Precision: 0.9751077070368598
+
+Recall: 0.8533159890642914
+
+F-score: 0.9101555610427176
+
+I-ORG
+
+Precision: 0.7365269461077845
+
+Recall: 0.3601756954612006
+
+F-score: 0.48377581120943947
+
+The overall F-score: 0.832
+
