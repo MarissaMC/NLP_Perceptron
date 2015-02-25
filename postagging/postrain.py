@@ -87,6 +87,10 @@ with open(input,'r',errors='ignore') as f:
                p_word='p:'+token_p1[0]
                c_word='c:'+token[0]
                n_word='n:'+token_a1[0]
+               if len(token[0])>1:
+                  su2=token[0]+':'+token[0][-2:]
+               if len(token[0])>2:        
+                  su3=token[0]+':'+token[0][-3:]
 
                instance+=(tag)
                instance+=(' ')               
@@ -97,6 +101,9 @@ with open(input,'r',errors='ignore') as f:
                instance+=(n_word)
                instance+=(' ')               
                instance+=(su2)
+               instance+=(' ') 
+               instance+=(su3)
+               instance+=(' ') 
                instance+=('\n') 
 
        

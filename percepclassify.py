@@ -25,4 +25,4 @@ for sen in sys.stdin:
       
     sys.stdout.write(max(judge, key=judge.get))
     sys.stdout.write('\n')
- 
+    sys.stdout.flush() 

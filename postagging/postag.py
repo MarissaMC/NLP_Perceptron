@@ -207,6 +207,12 @@ for sen in sys.stdin:
            dic_buffer[c_w]=0
            dic_buffer[n_w]=0
 
+           if len(token)>1:       
+              su2=token+':'+token[-2:]
+              dic_buffer[su2]=0
+           if len(token)>2:        
+              su3=token+':'+token[-3:]
+              dic_buffer[su3]=0 
 
            for b in dic_buffer:
                if b in dic_more:
@@ -225,6 +231,7 @@ for sen in sys.stdin:
         sys.stdout.write('/')
         sys.stdout.write(tagger[i])
         sys.stdout.write(' ')
+        sys.stdout.flush()
         if i==len(words)-2:
            sys.stdout.write('\n')
 
