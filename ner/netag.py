@@ -172,6 +172,7 @@ for sen in sys.stdin:
     words.insert(len(words),words[1])
     tagger=defaultdict()
 
+    tagger[0]='O'
     for i in range(1,len(words)-1):
         num+=1
       
@@ -193,11 +194,13 @@ for sen in sys.stdin:
            p_w='p:'+token_p1
            c_w='c:'+token
            n_w='n:'+token_a1  
+           p_t=token+':'+tagger[i-1]
 
            dic_buffer={}
            dic_buffer[p_w]=0
            dic_buffer[c_w]=0
            dic_buffer[n_w]=0
+           dic_buffer[p_t]=0
 
            for b in dic_buffer:
                if b in dic_more:
@@ -209,8 +212,14 @@ for sen in sys.stdin:
            else:
               tagger[i]=special(token)
         if token not in dic_one and c_w not in dic_more:
-           count3+=1
-           tagger[i]=special(token)
+           if tagger[i-1][0]=='B' or tagger[i-1][0]=='I':
+              if word_type(token)=='Aa-A':
+                 if token[-2:]=='NC' or token[-2:]=='AQ' or token[-3:]=='VMN' or token[-3:]=='VMM' or token[-3:]=='VMI' or token[-2:]=='NP': 
+                    tagger[i]='I'+tagger[i-1][1:]
+              else:
+                 tagger[i]='O'
+           if tagger[i-1][0]=='O':
+              tagger[i]=special(token)
 
 
         sys.stdout.write(words[i])
