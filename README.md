@@ -84,45 +84,42 @@ After 5 iteration of Averaged Perceptron, I got the following information:
 
 LOC
 
-Precision: 0.4360671
+Precision: 0.607
 
-Recall: 0.2683168
+Recall: 0.678
 
-F-score: 0.3322169
+F-score: 0.641
 
 PER
 
-Precision: 0.3854738
+Precision: 0.587
 
-Recall: 0.2843246
+Recall: 0.734
 
-F-score: 0.3272617
+F-score: 0.653
 
 MISC
 
-Precision: 0.4315402
+Precision: 0.465
 
-Recall: 0.0766312
+Recall: 0.342
 
-F-score: 0.1301509
+F-score: 0.394
 
 ORG
 
-Precision: 0.5324229
+Precision: 0.640
 
-Recall: 0.2188597
+Recall: 0.541
 
-F-score: 0.3102053
+F-score: 0.586
 
-O
 
-Precision: 0.9771206
+The overall Precision: 0.600
 
-Recall: 0.9915116
+The overall Recall: 0.606
 
-F-score: 0.9842635
-
-The overall F-score: 0.93
+The overall F-score: 0.603
 
 ### Use my Naive Bayes classifier instead of my perceptron classifier
 
@@ -134,45 +131,42 @@ For NER dataset, the performance metrics are as below:
 
 LOC
 
-Precision: 0.4818018
+Precision: 0.590
 
-Recall: 0.2570022
+Recall: 0.670
 
-F-score: 0.3352016
+F-score: 0.627
 
 ORG
 
-Precision: 0.5318478
+Precision: 0.372
 
-Recall: 0.212504
+Recall: 0.488
 
-F-score: 0.303673
+F-score: 0.422
 
 PER
 
-Precision: 0.7921168
+Precision: 0.130
 
-Recall: 0.1117093
+Recall: 0.503
 
-F-score: 0.1958049
+F-score: 0.207
 
 MISC
 
-Precision: 0.5202017
+Precision: 0.508
 
-Recall: 0.0567158
+Recall: 0.274
 
-F-score: 0.1022803
+F-score: 0.356
 
-O
 
-Precision: 0.9751077
+The overall Precision: 0.268
 
-Recall: 0.8533160
+The overall Recall: 0.511
 
-F-score: 0.9101556
-
-The overall F-score: 0.832
+The overall F-score: 0.351
 
 We can see that my Naive Bayes POS tagger has accuracy rate of 94.2%, which is a little higher than my Averaged Perceptron accuracy rate 93.9%. I think one of the reason is may because of my poor Perceptron quality. Also, because POS dataset has as many as 45 classes, which will make finding the class by referring from previous and next words a difficult thing. From my point of view, Perceptron is more sensitive than Naive Bayes for it changes from step by step. If I am unlucky that I meet with many special cases at the end of iteration of Averaged Perceptron, it will affect my model relatively heavily (of course, Averaged Perceptron aims at solve this problem, but need more iteration times), which may also cause a fall in accuracy rate.
 
