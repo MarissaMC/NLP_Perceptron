@@ -84,9 +84,11 @@ with open(input,'r',errors='ignore') as f:
                su2=''
                su3=''
                tag=token[1]
-               p_word='p:'+token_p1[0]
+               p_tag='pt:'+token[0]+token_p1[1]
+               p_word='p:'+token[0]+token_p1[0]
                c_word='c:'+token[0]
-               n_word='n:'+token_a1[0]
+               n_word='n:'+token[0]+token_a1[0]
+               w_shape=token[0]+word_type(token[0])
                if len(token[0])>1:
                   su2=token[0]+':'+token[0][-2:]
                if len(token[0])>2:        
@@ -94,11 +96,15 @@ with open(input,'r',errors='ignore') as f:
 
                instance+=(tag)
                instance+=(' ')               
+               instance+=(p_tag)
+               instance+=(' ')               
                instance+=(p_word)
                instance+=(' ')               
                instance+=(c_word)
                instance+=(' ')               
                instance+=(n_word)
+               instance+=(' ')               
+               instance+=(w_shape)
                instance+=(' ')               
                instance+=(su2)
                instance+=(' ') 

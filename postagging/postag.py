@@ -180,6 +180,7 @@ for sen in sys.stdin:
     words.insert(len(words),words[1])
     tagger=defaultdict()
 
+    tagger[0]='.'
     for i in range(1,len(words)-1):
         num+=1
         token=words[i]
@@ -198,14 +199,18 @@ for sen in sys.stdin:
            
            su2=''
            su3=''
-           p_w='p:'+token_p1
+           p_t='pt:'+token+tagger[i-1]
+           p_w='p:'+token+token_p1
            c_w='c:'+token
-           n_w='n:'+token_a1 
+           n_w='n:'+token+token_a1 
+           w_s=token+word_type(token)
 
            dic_buffer={}
+           dic_buffer[p_t]=0
            dic_buffer[p_w]=0
            dic_buffer[c_w]=0
            dic_buffer[n_w]=0
+           dic_buffer[w_s]=0
 
            if len(token)>1:       
               su2=token+':'+token[-2:]
