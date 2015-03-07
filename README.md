@@ -77,7 +77,7 @@ Part IV
 Piazza discussion, TA office hour
 
 ### Accuracy of my part-of-speech tagger
-After 5 iteration of Averaged Perceptron, my POS tagger accuracy is 93.9%
+After 5 iteration of Averaged Perceptron, my POS tagger accuracy is 94.4%
 
 ### Precision, recall and F-score for each named entity types and the overall F-score
 After 5 iteration of Averaged Perceptron, I got the following information:
@@ -168,6 +168,6 @@ The overall Recall: 0.511
 
 The overall F-score: 0.351
 
-We can see that my Naive Bayes POS tagger has accuracy rate of 94.2%, which is a little higher than my Averaged Perceptron accuracy rate 93.9%. I think one of the reason is may because of my poor Perceptron quality. Also, because POS dataset has as many as 45 classes, which will make finding the class by referring from previous and next words a difficult thing. From my point of view, Perceptron is more sensitive than Naive Bayes for it changes from step by step. If I am unlucky that I meet with many special cases at the end of iteration of Averaged Perceptron, it will affect my model relatively heavily (of course, Averaged Perceptron aims at solve this problem, but need more iteration times), which may also cause a fall in accuracy rate.
+We can see that my Naive Bayes POS tagger has accuracy rate of 94.2%, which is about the same with my Averaged Perceptron accuracy rate 94.4%. Because POS dataset has as many as 45 classes, which will make finding the class by referring from previous and next words a difficult thing. From my point of view, Perceptron is more sensitive than Naive Bayes for it changes from step by step. If I am unlucky that I meet with many special cases at the end of iteration of Averaged Perceptron, it will affect my model relatively heavily (of course, Averaged Perceptron aims at solve this problem, but need more iteration times), which may also cause a fall in accuracy rate.
 
 When using Naive Bayes to tag NER dataset, we can see a relatively lower Precision, Recall and F-score value than my Averaged Perceptron. I think it is because the major class in NER dataset is "O", which means the classes distribution is not even. As Naive Bayes cares about probability, when P("O") is much bigger than other classes, word has class "O" will tend to be tagged with "O". This may cause tag mistake when a word has low occurrence in all its classes and has class "O". But Perceptron doesn't have this problem because it corrects the weight step by step.
