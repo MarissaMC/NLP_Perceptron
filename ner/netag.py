@@ -151,10 +151,10 @@ def special(word):
 
 ###############################################################
 
-sys.stdin=codecs.getreader('utf8')(sys.stdin.detach(),errors='ignore')
-model = sys.argv[1]
+sys.stdin=codecs.getreader('Latin-1')(sys.stdin.detach(),errors='ignore')
+model = open(sys.argv[1],'r',encoding='Latin-1')
 
-weight=json.load(open(model))
+weight=json.load(model)
 instance=weight['Instance_More']
 dic_one=weight['dic_one']
 dic_more=perceptron(instance,5)
@@ -169,11 +169,13 @@ for sen in sys.stdin:
 
     words=sen.split()
     words.insert(0,words[len(words)-1])
-    words.insert(len(words),words[1])
+    words.insert(0,words[len(words)-2])
+    words.insert(len(words),words[2])
     tagger=defaultdict()
 
     tagger[0]='O'
-    for i in range(1,len(words)-1):
+    tagger[1]='O'
+    for i in range(2,len(words)-1):
         num+=1
       
         token=words[i]
@@ -187,20 +189,27 @@ for sen in sys.stdin:
 
         if token not in dic_one and words[i][0]!='/':
            token_p1=words[i-1]
+           token_p2=words[i-2]
            token_a1=words[i+1]
 
            judge=defaultdict(float)
            
-           p_w='p:'+token_p1
+           p2_t='p2:'+token+tagger[i-2]
+           p_2t=token+tagger[i-1]+tagger[i-2]
+           p2_w='p2:'+token+token_p2
+           p_w='p:'+token+token_p1
            c_w='c:'+token
-           n_w='n:'+token_a1  
-           p_t=token+':'+tagger[i-1]
+           n_w='n:'+token+token_a1  
+           p_t='p1:'+token+tagger[i-1]
 
            dic_buffer={}
+           dic_buffer[p_t]=0
            dic_buffer[p_w]=0
+           dic_buffer[p2_w]=0
+           dic_buffer[p2_t]=0
+           dic_buffer[p_2t]=0
            dic_buffer[c_w]=0
            dic_buffer[n_w]=0
-           dic_buffer[p_t]=0
 
            for b in dic_buffer:
                if b in dic_more:
